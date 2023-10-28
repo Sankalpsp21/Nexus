@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import NavBar from './components/NavBar';
 import Landing from './pages/Landing';
-import { One, Two } from './pages/onboarding/index.tsx';
+import { JoinGroups, Two } from './pages/onboarding/index.tsx';
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
@@ -30,7 +30,7 @@ function OnboardNavigation() {
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes location={location}>
             <Route path="/" element={<Landing />} />
-            <Route path="/1" element={<One />} />
+            <Route path="/1" element={<JoinGroups />} />
             <Route path="/2" element={<Two />} />
           </Routes>
         </CSSTransition>
