@@ -1,34 +1,19 @@
-import {
-    ClerkLoaded,
-    ClerkLoading,
-    SignedIn,
-    SignedOut,
-  } from "@clerk/clerk-react";
-  import { useState } from "react";
-  import { Navigate } from "react-router-dom";
-  import NavBar from "../components/NavBar";
-  import { InTextSignIn } from "../components/modals/SignIn";
+import { ClerkLoaded, ClerkLoading, SignedIn, SignedOut } from '@clerk/clerk-react';
+import NavBar from '../components/NavBar';
 
-  
-  export default function Landing() {
-  
-  
-    return (
-        <>
-        <NavBar />
-        <ClerkLoaded>
-            <SignedOut>
-            <>
-                You are signed out
-            </>
-            </SignedOut>
-            <SignedIn>
-            <>
-                You are signed in
-            </>
-            </SignedIn>
-        </ClerkLoaded>
-        <ClerkLoading></ClerkLoading>
-        </>
-    );
-  }
+export default function Landing() {
+  return (
+    <>
+      <NavBar />
+      <ClerkLoaded>
+        <SignedOut>
+          <h1 className="text-3xl text-400">You are signed out.</h1>
+        </SignedOut>
+        <SignedIn>
+          <>You are signed in</>
+        </SignedIn>
+      </ClerkLoaded>
+      <ClerkLoading></ClerkLoading>
+    </>
+  );
+}

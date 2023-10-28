@@ -1,21 +1,9 @@
-import { useAuth, useClerk } from "@clerk/clerk-react";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useClerk } from '@clerk/clerk-react';
 
 export function SignIn() {
   const clerk = useClerk();
-  const navigate = useNavigate();
-  const { isLoaded, isSignedIn } = useAuth();
 
-  // useEffect(() => {
-  //   if (isLoaded && isSignedIn) {
-  //     navigate("/chat");
-  //   }
-  // }, [isLoaded, isSignedIn, navigate]);
-
-  const handleClicked = async (
-    e: React.MouseEvent<HTMLButtonElement>
-  ) => {
+  const handleClicked = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     clerk.openSignIn();
   };
@@ -34,18 +22,13 @@ export function SignIn() {
 
 export function InTextSignIn() {
   const clerk = useClerk();
-  const navigate = useNavigate();
-  const { isLoaded, isSignedIn } = useAuth();
-
   // useEffect(() => {
   //   if (isLoaded && isSignedIn) {
   //     navigate("/chat");
   //   }
   // }, [isLoaded, isSignedIn, navigate]);
 
-  const handleClicked = async (
-    event: React.MouseEvent<HTMLAnchorElement>
-  ) => {
+  const handleClicked = async (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     clerk.openSignIn();
   };
@@ -59,8 +42,6 @@ export function InTextSignIn() {
 
 export function SignUp() {
   const clerk = useClerk();
-  const navigate = useNavigate();
-  const { isLoaded, isSignedIn } = useAuth();
 
   // useEffect(() => {
   //   if (isLoaded && isSignedIn) {
@@ -68,9 +49,7 @@ export function SignUp() {
   //   }
   // }, [isLoaded, isSignedIn, navigate]);
 
-  const handleClicked = async (
-    e: React.MouseEvent<HTMLButtonElement>
-  ) => {
+  const handleClicked = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     clerk.openSignUp();
   };
