@@ -11,7 +11,7 @@ export function SignIn() {
   return (
     <>
       <button
-        className="min-w-min cursor-pointer border-none m-2 mr-8 hover:text-primary-orange text-lg font-bold transition ease-linear"
+        className="min-w-min cursor-pointer border-2 border-slate-600 px-5 py-2 rounded-md m-2 mr-8 text-lg font-bold transition ease-linear hover:bg-300"
         onClick={(e) => handleClicked(e)}
       >
         Log In
@@ -57,7 +57,7 @@ export function SignUp() {
   return (
     <>
       <button
-        className="btn btn-primary bg-primary-orange min-w-min cursor-pointer text-white border-none hover:bg-white hover:text-primary-orange text-base normal-case"
+        className="btn btn-primary bg-400 min-w-min cursor-pointer text-white hover:bg-600 border-none text-base normal-case"
         onClick={(e) => handleClicked(e)}
       >
         Sign Up
