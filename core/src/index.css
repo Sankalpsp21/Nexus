@@ -7,6 +7,15 @@
   opacity: 0;
 }
 
+.cl-formButtonPrimary {
+  background-color: #7e7cfd;
+  color: #fff;
+}
+
+.cl-footerActionLink {
+  color: #7e7cfd;
+}
+
 .fade-enter {
   opacity: 0;
   transform: translateX(-40%);
