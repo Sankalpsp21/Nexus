@@ -1,5 +1,6 @@
 import { ClerkProvider } from "@clerk/clerk-react";
 import { Route, Routes } from "react-router-dom";
+import Landing from "./pages/Landing";
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
@@ -12,7 +13,7 @@ function App() {
     <>
       <ClerkProvider publishableKey={clerkPubKey}>
         <Routes>
-          <Route path="/" element={<h1>Hello</h1>} />
+          <Route path="/" element={<Landing />} />
         </Routes>
       </ClerkProvider>
     </>
