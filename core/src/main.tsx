@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.tsx';
+import CustomBackground from './components/CustomBackground.tsx';
 import './index.css';
 
 if (!import.meta.env.VITE_CONVEX_URL) {
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ConvexProvider client={convexClient}>
       <BrowserRouter>
-        <App />
+        <CustomBackground>
+          <App />
+        </CustomBackground>
       </BrowserRouter>
     </ConvexProvider>
   </React.StrictMode>
