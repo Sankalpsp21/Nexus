@@ -1,119 +1,118 @@
 {
-    "support": [
-        {
-            "title": "Mental Health",
-            "icon": "FaBrain"
-        },
-        {
-            "title": "Physical Health",
-            "icon": "FaHandHoldingMedical"
-        },
-        {
-            "title": "Autism",
-            "icon": "FaPuzzlePiece"
-        },
-        {
-            "title": "Dyslexia",
-            "icon": "FaBookOpen"
-        },
-        {
-            "title": "Mobility Impairment",
-            "icon": "FaWheelchair"
-        },
-        {
-            "title": "Blind and Visually Impaired",
-            "icon": "FaBlind"
-        },
-        {
-            "title": "Deaf and Hard of Hearing",
-            "icon": "FaDeaf"
-        },
-        {
-            "title": "Cancer Survivors and Fighters",
-            "icon": "FaRibbon"
-        },
-        {
-            "title": "Parenting",
-            "icon": "FaChild"
-        },
-        {
-            "title": "LGBTQ+",
-            "icon": "FaRainbow"
-        },
-        {
-            "title": "Veterans",
-            "icon": "FaMedal"
-        },
-        {
-            "title": "Addiction Recovery",
-            "icon": "GiPhoenix"
-        },
-        {
-            "title": "Unemployment and Career Transition",
-            "icon": "FaBriefcase"
-        },
-        {
-            "title": "Immigrants and Refugees",
-            "icon": "FaGlobeAmericas"
-        }
-    ],
-    "interest": [
-        {
-            "title": "Baking",
-            "icon": "FaBirthdayCake"
-        },
-        {
-            "title": "Gardening",
-            "icon": "GiPlantRoots"
-        },
-        {
-            "title": "Astronomy and Star Gazing",
-            "icon": "FaStar"
-        },
-        {
-            "title": "Indie Games",
-            "icon": "GiGamepad"
-        },
-        {
-            "title": "Guitar",
-            "icon": "GiAcousticGuitar"
-        },
-        {
-            "title": "Videography and Photography",
-            "icon": "FaCameraRetro"
-        },
-        {
-            "title": "Yoga",
-            "icon": "GiYogaPose"
-        },
-        {
-            "title": "Environment",
-            "icon": "FaRecycle"
-        },
-        {
-            "title": "Science Fiction",
-            "icon": "FaBookDead"
-        },
-        {
-            "title": "Street Art",
-            "icon": "MdOutlineFormatPaint"
-        },
-        {
-            "title": "Houses",
-            "icon": "FaHome"
-        },
-        {
-            "title": "Electronics and Tinkering",
-            "icon": "GiSolderingIron"
-        },
-        {
-            "title": "Bird Watching",
-            "icon": "FaBinoculars"
-        },
-        {
-            "title": "History",
-            "icon": "FaLandmark"
-        }
-    ]
-  }
-  
+  "support": [
+    {
+      "title": "Mental Health",
+      "icon": "FaBrain"
+    },
+    {
+      "title": "Physical Health",
+      "icon": "FaHandHoldingMedical"
+    },
+    {
+      "title": "Autism",
+      "icon": "FaPuzzlePiece"
+    },
+    {
+      "title": "Dyslexia",
+      "icon": "FaBookOpen"
+    },
+    {
+      "title": "Mobility Impairment",
+      "icon": "FaWheelchair"
+    },
+    {
+      "title": "Blind and Visually Impaired",
+      "icon": "FaBlind"
+    },
+    {
+      "title": "Deaf and Hard of Hearing",
+      "icon": "FaDeaf"
+    },
+    {
+      "title": "Cancer Survivors and Fighters",
+      "icon": "FaRibbon"
+    },
+    {
+      "title": "Parenting",
+      "icon": "FaChild"
+    },
+    {
+      "title": "LGBTQ+",
+      "icon": "FaRainbow"
+    },
+    {
+      "title": "Veterans",
+      "icon": "FaMedal"
+    },
+    {
+      "title": "Addiction Recovery",
+      "icon": "GiPhoenix"
+    },
+    {
+      "title": "Unemployment and Career Transition",
+      "icon": "FaBriefcase"
+    },
+    {
+      "title": "Immigrants and Refugees",
+      "icon": "FaGlobeAmericas"
+    }
+  ],
+  "interest": [
+    {
+      "title": "Baking",
+      "icon": "FaBirthdayCake"
+    },
+    {
+      "title": "Gardening",
+      "icon": "GiPlantRoots"
+    },
+    {
+      "title": "Astronomy and Star Gazing",
+      "icon": "FaStar"
+    },
+    {
+      "title": "Indie Games",
+      "icon": "GiGamepad"
+    },
+    {
+      "title": "Guitar",
+      "icon": "GiAcousticGuitar"
+    },
+    {
+      "title": "Videography and Photography",
+      "icon": "FaCameraRetro"
+    },
+    {
+      "title": "Yoga",
+      "icon": "GiYogaPose"
+    },
+    {
+      "title": "Environment",
+      "icon": "FaRecycle"
+    },
+    {
+      "title": "Science Fiction",
+      "icon": "FaBookDead"
+    },
+    {
+      "title": "Street Art",
+      "icon": "MdOutlineFormatPaint"
+    },
+    {
+      "title": "Houses",
+      "icon": "FaHome"
+    },
+    {
+      "title": "Electronics and Tinkering",
+      "icon": "GiSolderingIron"
+    },
+    {
+      "title": "Bird Watching",
+      "icon": "FaBinoculars"
+    },
+    {
+      "title": "History",
+      "icon": "FaLandmark"
+    }
+  ]
+}
