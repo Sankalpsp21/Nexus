@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import IconButton from '../../components/IconButton';
 import { ICONS } from '../../components/icons'; // import ICONS
+import { MdNavigateNext } from 'react-icons/md';
 
 export function JoinGroups() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col items-center justify-center">
@@ -14,22 +16,27 @@ export function JoinGroups() {
             </>
           ))}
         </div>
-        <Link to="/2">Two</Link>
+        <button className="btn bg-950 hover:bg-300" onClick={() => navigate('/2')}>
+          <MdNavigateNext className="text-white h-10 w-10" />
+        </button>
       </div>
     </>
   );
 }
 
 export function Two() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-4xl">Two</h1>
-        <Link to="/1">One</Link>
         <textarea
-          className="textarea textarea-bordered w-11/12 h-96"
+          className="textarea textarea-bordered w-11/12 h-96 mb-4"
           placeholder="Tell us about your interests"
         ></textarea>
+        <button className="btn bg-950 hover:bg-300" onClick={() => navigate('/1')}>
+          <MdNavigateNext className="text-white h-10 w-10" />
+        </button>
       </div>
     </>
   );
