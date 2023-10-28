@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^4.27.1",
+    "@faker-js/faker": "^8.2.0",
     "@react-icons/all-files": "^4.1.0",
     "convex": "^1.5.1",
     "prop-types": "^15.8.1",
