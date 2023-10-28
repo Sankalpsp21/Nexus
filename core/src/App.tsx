@@ -12,10 +12,18 @@ function App() {
   return (
     <>
       <ClerkProvider publishableKey={clerkPubKey}>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-        </Routes>
+        <Navigation />
       </ClerkProvider>
+    </>
+  );
+}
+
+function Navigation() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
     </>
   );
 }
