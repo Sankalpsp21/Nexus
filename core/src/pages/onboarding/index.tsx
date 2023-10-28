@@ -26,6 +26,10 @@ export function Two() {
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-4xl">Two</h1>
         <Link to="/1">One</Link>
+        <textarea
+          className="textarea textarea-bordered w-11/12 h-96"
+          placeholder="Tell us about your interests"
+        ></textarea>
       </div>
     </>
   );
