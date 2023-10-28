@@ -2,10 +2,9 @@ import { v } from "convex/values";
 import { mutation } from "./_generated/server";
 
 export const createUser = mutation({
-      args: { value: v.boolean() },
+      args: { value: v.boolean(), clerkId: v.string() },
       handler: async (ctx) => {
-            const id = await ctx.db.insert("users", { initialLogin: true });
-            return id;
+            await ctx.db.insert("users", { initialLogin: true });
       },
 });
 

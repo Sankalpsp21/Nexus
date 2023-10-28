@@ -1,16 +1,25 @@
 import { ClerkLoaded, ClerkLoading, SignedIn, SignedOut, useAuth, useClerk } from '@clerk/clerk-react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import HeaderText from '../components/HeaderText';
 import { ArrowIcon } from '../components/icons';
 
 export default function Landing() {
   const { isSignedIn } = useAuth();
   const clerk = useClerk();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     if (!isSignedIn) {
       clerk.openSignUp();
     }
   };
+
+  useEffect(() => {
+    if (isSignedIn) {
+      navigate('/1');
+    }
+  }, [isSignedIn, navigate]);
 
   return (
     <>
