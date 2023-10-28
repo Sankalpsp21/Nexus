@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from "react";
 import { useHMSActions } from "@100mslive/react-sdk";
 
@@ -35,6 +35,12 @@ console.error(e)
 }
 };
 
+// Handle leaving room
+useEffect(() => {
+    window.onunload = () => {
+      hmsActions.leave();
+    };
+  }, [hmsActions]);
 
 return (
 <div onClick={handleSubmit}>
