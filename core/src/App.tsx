@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import NavBar from './components/NavBar';
 import Landing from './pages/Landing';
-import { One, Two } from './pages/onboarding';
+import { One, Two } from './pages/onboarding/index.tsx';
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
