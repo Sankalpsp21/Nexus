@@ -1,6 +1,8 @@
 import { ClerkProvider } from '@clerk/clerk-react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Landing from './pages/Landing';
+import { One, Two } from './pages/onboarding';
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
@@ -18,12 +20,33 @@ function App() {
   );
 }
 
+function OnboardNavigation() {
+  const location = useLocation();
+  return (
+    <>
+      <TransitionGroup component={null}>
+        <CSSTransition key={location.key} classNames="fade" timeout={300}>
+          <Routes location={location}>
+            <Route path="/1" element={<One />} />
+            <Route path="/2" element={<Two />} />
+            <Route path="/" element={<Landing />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
+    </>
+  );
+}
+
 function Navigation() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-      </Routes>
+      <TransitionGroup component={null}>
+        <CSSTransition classNames="fade" timeout={300}>
+          <Routes>
+            <Route path="/*" element={<OnboardNavigation />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
     </>
   );
 }
