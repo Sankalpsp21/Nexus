@@ -38,7 +38,7 @@ export function Two() {
             className="textarea textarea-bordered w-[150%] h-96 mb-4 bg-white opacity-75"
             placeholder="Who are you? What do you do for fun? Let's get to know each other..."
           ></textarea>
-          <button className="btn bg-950 hover:bg-300" onClick={() => navigate('/1')}>
+          <button className="btn bg-950 hover:bg-300" onClick={() => navigate('/matching')}>
             <span className="text-50">Done</span>
             <MdNavigateNext className="text-white h-10 w-10" />
           </button>

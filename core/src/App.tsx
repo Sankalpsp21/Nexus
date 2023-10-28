@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import NavBar from './components/NavBar';
 import Landing from './pages/Landing';
 import { JoinGroups, Two } from './pages/onboarding/index.tsx';
+import Matching from "./pages/Matching"
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
@@ -48,6 +49,7 @@ function OnboardNavigation() {
                 </>
               }
             />
+            <Route path="/matching" element={<Matching />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
