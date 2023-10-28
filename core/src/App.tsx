@@ -1,6 +1,7 @@
 import { ClerkProvider } from '@clerk/clerk-react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import NavBar from './components/NavBar';
 import Landing from './pages/Landing';
 import { One, Two } from './pages/onboarding';
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <ClerkProvider publishableKey={clerkPubKey}>
+        <NavBar />
         <Navigation />
       </ClerkProvider>
     </>
@@ -27,9 +29,9 @@ function OnboardNavigation() {
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes location={location}>
+            <Route path="/" element={<Landing />} />
             <Route path="/1" element={<One />} />
             <Route path="/2" element={<Two />} />
-            <Route path="/" element={<Landing />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
