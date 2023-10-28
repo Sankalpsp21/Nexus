@@ -77,7 +77,7 @@ export const ICONS = [
   {
     name: 'Veterans',
     icon: <FaMedal />,
-      },
+  },
   {
     name: 'Unemployment and Career Transition',
     icon: <FaBriefcase />,
@@ -131,4 +131,3 @@ export const ICONS = [
     icon: <FaLandmark />,
   },
 ];
-

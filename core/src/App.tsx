@@ -30,8 +30,24 @@ function OnboardNavigation() {
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes location={location}>
             <Route path="/" element={<Landing />} />
-            <Route path="/1" element={<JoinGroups />} />
-            <Route path="/2" element={<Two />} />
+            <Route
+              path="/1"
+              element={
+                <>
+                  <progress className="progress bg-200 h-3 mb-2 rounded-none" value={30} max={100} />
+                  <JoinGroups />
+                </>
+              }
+            />
+            <Route
+              path="/2"
+              element={
+                <>
+                  <progress className="progress w-screen bg-200 h-3 mb-2 rounded-none" value={70} max={100} />
+                  <Two />
+                </>
+              }
+            />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

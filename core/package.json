@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^4.27.1",
-    "@ramonak/react-progress-bar": "^5.0.3",
     "@react-icons/all-files": "^4.1.0",
     "convex": "^1.5.1",
     "prop-types": "^15.8.1",
