@@ -13,7 +13,6 @@ const NavBar: React.FC = () => {
             </figure>
           </a>
         </li>
-        {/* The logo */}
         <SignedIn>
           <div className="flex flex-col justify-center">
             <UserButton afterSignOutUrl={'/'} />

@@ -10,12 +10,12 @@ interface RoomCardProps {
 
 const RoomCard: React.FC<RoomCardProps> = ({ userName, roomName, roomCode, onClick }) => {
   const hmsActions = useHMSActions();
-  const [inputValues] = useState({
-    //Name will be from clerk
-    //Room token is in props
-    userName: '',
-    roomCode: '',
-  });
+  // const [inputValues] = useState({
+  //   //Name will be from clerk
+  //   //Room token is in props
+  //   userName: '',
+  //   roomCode: '',
+  // });
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
