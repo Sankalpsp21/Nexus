@@ -1,7 +1,7 @@
 import { selectPeers, useHMSStore } from '@100mslive/react-sdk';
 import Peer from './Peer';
 import { useUser } from '@clerk/clerk-react';
-import rooms from '../../data/rooms.json';
+import rooms from '../data/rooms.json';
 
 function Room({ roomCode }: any) {
   const peers = useHMSStore(selectPeers);
