@@ -81,7 +81,7 @@ export function Lobby() {
       />
 
       <div className="my-12 translate-y-3/4">
-        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-950 hover:bg-300" onClick={() => navigate('/dashboard')}>
+        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-950 hover:bg-300" onClick={() => navigate('/match/uid-silt-mus')}>
           <span className="text-50">Cancel</span>
         </button>
       </div>

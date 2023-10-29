@@ -6,6 +6,7 @@ import Landing from './pages/content/Landing';
 import RoomPage from './pages/content/RoomPage';
 import Dashboard from './pages/dashboard/index';
 import { JoinGroups, Lobby, Two } from './pages/onboarding/index';
+import MatchPage from './pages/content/MatchPage';
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
@@ -79,6 +80,14 @@ function Navigation() {
                   <RoomPage />
                 </>
               }
+            />
+            <Route
+              path="/match/:roomCode"
+              element={
+                <>
+                  <MatchPage />
+                </>
+              } 
             />
             <Route path="/lobby" element={<Lobby />} />
           </Routes>
