@@ -1,5 +1,5 @@
 import { useHMSActions } from '@100mslive/react-sdk';
-import React, { useState } from 'react';
+import React from 'react';
 
 interface RoomCardProps {
   userName: string;
