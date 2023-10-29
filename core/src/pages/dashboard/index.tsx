@@ -31,9 +31,12 @@ export default function Dashboard() {
 
         {isConnected ? (
         <>
+        <div className='flex flex-col'>
           <Header/>
           <Room />
           <Footer />
+
+        </div>
         </>
         ) : (
           <div className='grid grid-cols-5 gap-2'>
