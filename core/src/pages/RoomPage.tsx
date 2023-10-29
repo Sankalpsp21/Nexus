@@ -23,13 +23,14 @@ export default function RoomPage() {
   }, [hmsActions, isConnected, navigate]);
 
   return (
-    <div className="relative flex flex-row">
+    <div className="flex">
       <SideBar />
-      <>
+
+      <div className="flex flex-row justify-between">
         <Header />
-        <Room />
+        <Room roomCode={roomCode} />
         <Footer />
-      </>
+      </div>
     </div>
   );
 }
