@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import Landing from './pages/Landing';
 import { JoinGroups, Two } from './pages/onboarding/index.tsx';
 import Dashboard from './pages/dashboard/index.tsx';
+import RoomPage from './pages/RoomPage.tsx';
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
@@ -63,7 +64,8 @@ function Navigation() {
         <CSSTransition classNames="fade" timeout={300}>
           <Routes>
             <Route path="/*" element={<OnboardNavigation />} />
-            <Route path="/dashboard" element={<><Dashboard/></>} />
+            <Route path="/dashboard" element={<><Dashboard /></>} />
+            <Route path="/room/:roomCode" element={<><RoomPage /></>} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
