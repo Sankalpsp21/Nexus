@@ -1,10 +1,10 @@
 import { selectIsConnectedToRoom, useHMSActions, useHMSStore } from '@100mslive/react-sdk';
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import SideBar from '../components/SideBar';
-import Footer from './dashboard/Footer';
-import Header from './dashboard/Header';
-import Room from './dashboard/Room';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import Room from '../../components/Room';
+import SideBar from '../../components/SideBar';
 
 export default function RoomPage() {
   const isConnected = useHMSStore(selectIsConnectedToRoom);
