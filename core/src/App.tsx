@@ -6,6 +6,7 @@ import Landing from './pages/content/Landing';
 import RoomPage from './pages/content/RoomPage';
 import Dashboard from './pages/dashboard/index';
 import { JoinGroups, Two } from './pages/onboarding/index';
+import { MatchedRoomPage } from './pages/match';
 
 if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
@@ -78,6 +79,7 @@ function Navigation() {
                 </>
               }
             />
+            <Route path="/match/:roomCode" element={<MatchedRoomPage />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
