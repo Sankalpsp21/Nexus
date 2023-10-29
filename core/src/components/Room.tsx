@@ -10,7 +10,7 @@ function Room() {
       <div className="peers-container">
         {peers.map((peer) => (
           <Peer key={peer.id} peer={peer} />
-        ))}s
+        ))}
       </div>
     </div>
   );
