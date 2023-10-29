@@ -1,5 +1,6 @@
 import { selectIsConnectedToRoom, useHMSActions, useHMSStore } from '@100mslive/react-sdk';
 import { useEffect, useState } from 'react';
+import { Vortex } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import RoomCard from '../../components/RoomCard';
 import SideBar from '../../components/SideBar';
@@ -31,7 +32,16 @@ export default function Dashboard() {
     return (
       <div className="flex flex-col justify-center items-center h-1/2 w-screen">
         <h1 className="text-7xl font-semibold text-gray-900">Joining room...</h1>
-        <div className="animate-spin rounded-full h-48 w-48 border-t-2 border-b-2 border-gray-900 my-12"></div>
+        <>
+          <Vortex
+            visible={true}
+            height="100"
+            width="100"
+            ariaLabel="vortex-loading"
+            wrapperClass="vortex-wrapper scale-150 my-12"
+            colors={['#7E7CFD', '#D2D2FE', '#524FFD', '', '#A6A4FE', '#2522FC']}
+          />
+        </>
       </div>
     );
   }

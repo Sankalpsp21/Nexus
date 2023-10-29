@@ -1,5 +1,5 @@
-import { selectPeers, useHMSStore } from "@100mslive/react-sdk";
-import Peer from "./Peer";
+import { selectPeers, useHMSStore } from '@100mslive/react-sdk';
+import Peer from './Peer';
 
 function Room() {
   const peers = useHMSStore(selectPeers);
@@ -10,7 +10,8 @@ function Room() {
       <div className="peers-container">
         {peers.map((peer) => (
           <Peer key={peer.id} peer={peer} />
-        ))}s
+        ))}
+        s
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
-import { useNavigate } from 'react-router-dom';
-
 import { useState } from 'react';
 import { MdNavigateNext } from 'react-icons/md';
+import { MagnifyingGlass } from 'react-loader-spinner';
+import { useNavigate } from 'react-router-dom';
 import IconButton from '../../components/IconButton';
-import { ICONS } from '../../components/icons'; // import ICONS
+import { ICONS } from '../../components/icons';
 
 export function JoinGroups() {
   const navigate = useNavigate();
@@ -43,6 +43,7 @@ export function JoinGroups() {
 
 export function Two() {
   const navigate = useNavigate();
+  // TODO: If it's not their initial login, we'll need to navigate() to the lobby
   return (
     <>
       <div className="flex flex-col items-center justify-start space-y-4">
@@ -60,5 +61,30 @@ export function Two() {
         </div>
       </div>
     </>
+  );
+}
+
+export function Lobby() {
+  const navigate = useNavigate();
+  return (
+    <div className="flex flex-col justify-center items-center h-1/2 w-full my-24">
+      <h1 className="text-7xl font-semibold text-900 text-center">Finding you a match...</h1>
+      <MagnifyingGlass
+        visible={true}
+        height="100"
+        width="100"
+        ariaLabel="magnifying-glass-loading"
+        wrapperStyle={{}}
+        wrapperClass="scale-150 my-12"
+        glassColor="#D2D2FE"
+        color="#786CFD"
+      />
+
+      <div className="my-12 translate-y-3/4">
+        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-950 hover:bg-300" onClick={() => navigate('/dashboard')}>
+          <span className="text-50">Cancel</span>
+        </button>
+      </div>
+    </div>
   );
 }
