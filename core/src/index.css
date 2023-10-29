@@ -47,8 +47,20 @@
     }
 
     .no-scrollbar {
-      -ms-overflow-style: none; 
-      scrollbar-width: none; 
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   }
+}
+
+.room_card {
+  background: linear-gradient(50deg, rgba(255, 255, 255, 0.4) 12%, rgba(255, 255, 255, 0.1) 77%);
+  background-blend-mode: multiply; /* Choose the blend mode you want */
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.box {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }

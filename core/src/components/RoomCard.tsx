@@ -1,46 +1,51 @@
-import React, { useEffect } from 'react';
-import { useState } from "react";
-import { useHMSActions } from "@100mslive/react-sdk";
-
+import { useHMSActions } from '@100mslive/react-sdk';
+import React, { useState } from 'react';
 
 interface RoomCardProps {
-userName: string;
-roomName: string;
-roomCode: string;
+  userName: string;
+  roomName: string;
+  roomCode: string;
+  onClick: () => void;
 }
 
-
-const RoomCard: React.FC<RoomCardProps> = ({ userName, roomName, roomCode }) => {
+const RoomCard: React.FC<RoomCardProps> = ({ userName, roomName, roomCode, onClick }) => {
   const hmsActions = useHMSActions();
   const [inputValues] = useState({
     //Name will be from clerk
     //Room token is in props
-    userName: "",
-    roomCode: ""
+    userName: '',
+    roomCode: '',
   });
 
-
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-
-    const authToken = await hmsActions.getAuthTokenByRoomCode({roomCode})
+    onClick();
+    const authToken = await hmsActions.getAuthTokenByRoomCode({ roomCode });
 
     try {
       await hmsActions.join({ userName, authToken });
     } catch (e) {
-      console.error(e)
+      console.error(e);
     }
   };
 
   return (
-    <div onClick={handleSubmit} className="w-64 p-4 mx-auto bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transform transition-transform hover:scale-105">
-        <h2 className="text-2xl font-bold text-gray-800">{`Join the ${roomName} room!`}</h2>
-    </div>
+    <>
+      <div className="card bg-white bg-opacity-60 border-violet-300 box h-fit flex flex-col justify-between border-2 p-2 hover:bg-100 hover:shadow-2xl transition duration-300 ease-in-out cursor-pointer rounded-xl hover:box">
+        <div className="card-body items-center text-center">
+          <h2 className="card-title text-900 text-2xl">{roomName} Room</h2>
+          <div className="card-actions justify-end">
+            <button
+              className="btn btn-primary bg-200 min-w-min cursor-pointer text-white hover:bg-300 border-none text-base uppercase"
+              onClick={handleSubmit}
+            >
+              Join
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
-
 export default RoomCard;
-
-
-

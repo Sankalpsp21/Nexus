@@ -1,10 +1,10 @@
+import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
 import React from 'react';
 import { SignIn, SignUp } from '../components/modals/SignIn';
-import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
 
 const NavBar: React.FC = () => {
   return (
-    <nav className="nav p-4 max-h-15 bg-slate-200">
+    <nav className="nav p-4 max-h-fit bg-slate-200 max-w-full">
       <ul className="flex flex-row justify-between">
         <li className="mr-4">
           <a href="/">
@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
           </div>
         </SignedIn>
         <SignedOut>
-          <li>
+          <li className="flex flex-row whitespace-nowrap items-center w-full sm:w-auto">
             <SignIn />
             <SignUp />
           </li>

@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 
 export default function SideBar() {
   return (
-    <div className="sticky left-0 w-64 bg-100 text-white p-4 top-24 opacity-100 overflow-hidden">
+    <div className="relative left-0 w-64 bg-100 text-white p-4 opacity-100 overflow-hidden sm:opacity-100 sm:static sm:w-64 sm:block sm:top-0 sm:left-0 sm:bottom-0 sm:overflow-y-auto sm:overflow-x-hidden sm:flex-shrink-0 sm:transition-all sm:duration-300">
       <div className="h-full max-h-[84.3vh] overflow-y-auto no-scrollbar">
         <h2 className="text-lg font-bold text-800">Active Nexus Users</h2>
         <ul>
@@ -26,7 +26,7 @@ export default function SideBar() {
         <ul>
           {Array.from({ length: 7 }, (_, index) => index + 1).map((item) => (
             <>
-              <li key={item} className="flex justify-start hover:bg-200 rounded-md px-4 py-4 w-fit">
+              <li key={item} className="flex justify-start hover:bg-200 rounded-md px-4 py-4 w-fit sm:w-full">
                 <div className="flex flex-row">
                   <h1 className="text-xl font-semibold my-2 mr-4 text-950">{faker.word.noun(3)}</h1>
                   <div className="avatar-group -space-x-6">
