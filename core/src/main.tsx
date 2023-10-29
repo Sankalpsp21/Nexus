@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.tsx';
 import CustomBackground from './components/CustomBackground.tsx';
+import { HMSRoomProvider } from "@100mslive/react-sdk";
+
 import './index.css';
 
 if (!import.meta.env.VITE_CONVEX_URL) {
@@ -15,11 +17,13 @@ const convexClient = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL);
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ConvexProvider client={convexClient}>
-      <BrowserRouter>
-        <CustomBackground>
-          <App />
-        </CustomBackground>
-      </BrowserRouter>
+      <HMSRoomProvider>
+        <BrowserRouter>
+          <CustomBackground>
+            <App />
+          </CustomBackground>
+        </BrowserRouter>
+      </HMSRoomProvider>
     </ConvexProvider>
   </React.StrictMode>
 );
