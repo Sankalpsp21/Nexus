@@ -7,9 +7,9 @@ const NavBar: React.FC = () => {
     <nav className="nav p-4 max-h-fit bg-slate-200 max-w-full">
       <ul className="flex flex-row justify-between">
         <li className="mr-4">
-          <a href="/">
+          <a href="/dashboard">
             <figure className="w-36">
-              <img src="/nexus-logo.svg" alt="Nexus logo" className="rounded-xl" />
+              <img src="/nexus-logo.svg" alt="Nexus logo" className="rounded-xl scale-150 -translate-y-7" />
             </figure>
           </a>
         </li>
