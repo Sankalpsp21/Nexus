@@ -26,7 +26,7 @@ export default function RoomPage() {
     <div className="flex">
       <SideBar />
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-evenly item-stretch space-x-96 float-right bg-slate-900 text-white w-full">
         <Header />
         <Room roomCode={roomCode} />
         <Footer />

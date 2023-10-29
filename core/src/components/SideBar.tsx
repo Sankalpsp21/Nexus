@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 
 export default function SideBar() {
   return (
-    <div className="relative left-0 w-64 bg-100 text-white p-4 opacity-100 overflow-hidden sm:opacity-100 sm:static sm:w-64 sm:block sm:top-0 sm:left-0 sm:bottom-0 sm:overflow-y-auto sm:overflow-x-hidden sm:flex-shrink-0 sm:transition-all sm:duration-300">
+    <div className="relative float-left w-64 bg-100 text-white p-4 opacity-100 overflow-hidden sm:opacity-100 sm:static sm:w-64 sm:block sm:top-0 sm:left-0 sm:bottom-0 sm:overflow-y-auto sm:overflow-x-hidden sm:flex-shrink-0 sm:transition-all sm:duration-300">
       <div className="h-full max-h-[84.3vh] overflow-y-auto no-scrollbar">
         <h2 className="text-lg font-bold text-800">Active Nexus Users</h2>
         <ul>

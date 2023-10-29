@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <header>
-      <button id="leave-btn" className="btn btn-accent bg-amber-200 hover:bg-amber-100" onClick={() => handleClick()}>
+      <button id="leave-btn" className="btn btn-accent bg-stone-600 hover:bg-stone-400" onClick={() => handleClick()}>
         <svg viewBox="0 0 512 512" fill="currentColor" height="1em" width="1em">
           <path
             fill="none"
