@@ -1,9 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-
 import { useState } from 'react';
 import { MdNavigateNext } from 'react-icons/md';
 import IconButton from '../../components/IconButton';
-import { ICONS } from '../../components/icons'; // import ICONS
+import { ICONS } from '../../components/icons';
 
 export function JoinGroups() {
   const navigate = useNavigate();
@@ -22,24 +21,26 @@ export function JoinGroups() {
       <div className="flex flex-col items-center justify-center">
         <div className="grid grid-cols-8 gap-8 mx-12 my-12">
           {ICONS.map((icon, index) => (
-            <>
-              <IconButton
-                key={index}
-                name={icon.name}
-                icon={icon.icon}
-                onClick={() => handleButtonClick(index)}
-                selected={selectedButtons[index]}
-              />
-            </>
+            <IconButton
+              key={index}
+              name={icon.name}
+              icon={icon.icon}
+              onClick={() => handleButtonClick(index)}
+              selected={selectedButtons[index]}
+            />
           ))}
         </div>
-        <button className="btn bg-950 hover:bg-300 mb-4" onClick={() => navigate('/2')}>
+        <button className="btn bg-950 hover:bg-300 mb-4" onClick={() => {
+          console.log(selectedButtons);
+          navigate('/2');
+        }}>
           <MdNavigateNext className="text-white h-10 w-10" />
         </button>
       </div>
     </>
   );
 }
+
 
 export function Two() {
   const navigate = useNavigate();
@@ -53,7 +54,10 @@ export function Two() {
             className="textarea textarea-bordered w-[150%] h-96 mb-4 bg-white opacity-75"
             placeholder="Who are you? What do you do for fun? Let's get to know each other..."
           ></textarea>
-          <button className="btn bg-950 hover:bg-300" onClick={() => navigate('/dashboard')}>
+          <button className="btn bg-950 hover:bg-300" onClick={() => {
+            //Create user
+            navigate('/dashboard')
+          }}>
             <span className="text-50">Done</span>
             <MdNavigateNext className="text-white h-10 w-10" />
           </button>

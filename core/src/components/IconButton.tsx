@@ -9,7 +9,7 @@ export default function IconButton({ name, icon, onClick, selected }: IconButton
   return (
     <div
       className={`flex flex-col bg-white justify-center items-center flex-wrap border-2 shadow-sm p-2 hover:bg-100 hover:shadow-2xl transition duration-300 ease-in-out cursor-pointer rounded-xl border-200 ${
-        selected ? 'bg-violet-300' : ''
+        selected ? 'bg-violet-500' : ''
       }`}
       onClick={onClick}
     >
