@@ -1,8 +1,8 @@
 import { ClerkLoaded, ClerkLoading, SignedIn, SignedOut, useAuth, useClerk } from '@clerk/clerk-react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import HeaderText from '../components/HeaderText';
-import { ArrowIcon } from '../components/icons';
+import HeaderText from '../../components/HeaderText';
+import { ArrowIcon } from '../../components/icons';
 
 export default function Landing() {
   const { isSignedIn } = useAuth();

@@ -2,8 +2,8 @@ import { ConvexProvider, ConvexReactClient } from 'convex/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App.tsx';
-import CustomBackground from './components/CustomBackground.tsx';
+import App from './App';
+import CustomBackground from './components/CustomBackground';
 import { HMSRoomProvider } from "@100mslive/react-sdk";
 
 import './index.css';
