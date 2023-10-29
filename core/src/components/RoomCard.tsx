@@ -32,13 +32,6 @@ const RoomCard: React.FC<RoomCardProps> = ({ userName, roomName, roomCode }) => 
     }
   };
 
-  // Handle leaving room
-  useEffect(() => {
-      window.onunload = () => {
-        hmsActions.leave();
-      };
-    }, [hmsActions]);
-
   return (
     <div onClick={handleSubmit} className="w-64 p-4 mx-auto bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transform transition-transform hover:scale-105">
         <h2 className="text-2xl font-bold text-gray-800">{`Join the ${roomName} room!`}</h2>
