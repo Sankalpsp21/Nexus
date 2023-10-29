@@ -5,9 +5,9 @@ import rooms from '../../data/rooms.json';
 export default function Dashboard() {
   return (
     <div className="relative">
-      <div className='grid grid-cols-2'>
+      <div className='flex flex-row flex-wrap'>
         <SideBar />
-        <div>
+        <div className='grid grid-cols-5 gap-2'>
           {rooms.map((room) => (
               <RoomCard key={room.roomCode} userName = "hello" roomName={room.roomName} roomCode={room.roomCode} />
           ))}

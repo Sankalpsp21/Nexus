@@ -22,7 +22,7 @@ const RoomCard: React.FC<RoomCardProps> = ({ userName, roomName, roomCode }) => 
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    
+
     const authToken = await hmsActions.getAuthTokenByRoomCode({roomCode})
 
     try {
@@ -40,8 +40,8 @@ const RoomCard: React.FC<RoomCardProps> = ({ userName, roomName, roomCode }) => 
     }, [hmsActions]);
 
   return (
-    <div onClick={handleSubmit}>
-        <h2 className="text-black">Join the {roomName} room!</h2>
+    <div onClick={handleSubmit} className="w-64 p-4 mx-auto bg-white rounded-lg shadow-md cursor-pointer hover:shadow-lg transform transition-transform hover:scale-105">
+        <h2 className="text-2xl font-bold text-gray-800">{`Join the ${roomName} room!`}</h2>
     </div>
   );
 };
