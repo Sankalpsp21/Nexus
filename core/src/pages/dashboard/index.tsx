@@ -36,7 +36,7 @@ export default function Dashboard() {
           <Footer />
         </>
         ) : (
-          <div className='grid grid-cols-5 gap-2'>
+          <div className='grid grid-cols-5 gap-2 ml-96'>
             {rooms.map((room) => (
                 <RoomCard key={room.roomCode} userName = "hello" roomName={room.roomName} roomCode={room.roomCode} />
             ))}
