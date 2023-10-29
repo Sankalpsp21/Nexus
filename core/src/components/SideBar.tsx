@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function SideBar() {
   const navigate = useNavigate();
+  
   const handleMatchClick = () => { 
       navigate('/lobby');
   }
@@ -12,11 +13,11 @@ export default function SideBar() {
     <div className="relative float-left w-64 bg-100 text-white p-4 opacity-100 overflow-hidden sm:opacity-100 sm:static sm:w-64 sm:block sm:top-0 sm:left-0 sm:bottom-0 sm:overflow-y-auto sm:overflow-x-hidden sm:flex-shrink-0 sm:transition-all sm:duration-300">
       <div className="h-full max-h-[84.3vh] overflow-y-auto no-scrollbar">
         
-        <h2 className="text-lg font-bold text-800 mb-1" onClick={handleMatchClick}>Match with a user</h2>
+        <h2 className="text-lg font-bold text-800 mb-1">Match with a user</h2>
         <div className='flex justify-center mb-3'>
-          <a href="/dashboard" className='btn btn-primary hover:bg-200'>
+          <button className='btn btn-primary hover:bg-200' onClick={handleMatchClick}>
               Enter the Nexus
-          </a>
+          </button>
         </div>
 
         <h2 className="text-lg font-bold text-800">Active Nexus Users</h2>

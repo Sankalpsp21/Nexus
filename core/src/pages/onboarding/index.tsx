@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MdNavigateNext } from 'react-icons/md';
 import { MagnifyingGlass } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
@@ -66,6 +66,13 @@ export function Two() {
 
 export function Lobby() {
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    setTimeout(() => {
+        navigate('/match/uid-silt-mus');
+    }, 3000);
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center h-1/2 w-full my-24">
       <h1 className="text-7xl font-semibold text-900 text-center">Finding you a match...</h1>
@@ -81,7 +88,10 @@ export function Lobby() {
       />
 
       <div className="my-12 translate-y-3/4">
-        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-950 hover:bg-300" onClick={() => navigate('/match/uid-silt-mus')}>
+        <button
+          className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-950 hover:bg-300"
+          onClick={() => navigate('/dashboard')}
+        >
           <span className="text-50">Cancel</span>
         </button>
       </div>

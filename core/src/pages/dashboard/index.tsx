@@ -26,6 +26,10 @@ export default function Dashboard() {
         hmsActions.leave();
       }
     };
+
+    return () => {
+      window.onunload = null;
+    };
   }, [hmsActions, isConnected]);
 
   if (isLoading) {
